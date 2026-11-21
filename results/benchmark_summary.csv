@@ -1,0 +1,5 @@
+Run,Split / sequence,Degradation config,ATE RMSE (m),RPE (m),Normal RMSE (m),Tail error (m),Gap error (m),Checkpoint error (m),ms per IMU second,Heap MB,Notes
+Baseline,validation (figure8),"default (seed 42, 25s)",119.5247,18.8577,88.1964,198.8124,57.5761,102.1265,3.31,0.835,Raw strapdown integration without drift regularizer
+Robust handling,validation (figure8),"default (seed 42, 25s)",119.5247,18.8577,88.1964,198.8124,57.5761,102.1265,12.73,0.835,"Spike screening, zero-dt policy, gap sub-stepping"
+Smoother,validation (figure8),"default (seed 42, 25s)",5.066,2.606,2.799,9.7377,3.4215,3.6662,15.05,1.015,Gravity tilt observer + offline velocity regularizer
+Final frozen,held-out (complex_helix),"unseen seed 100, 30s helix",5.0729,4.0952,4.0906,8.3248,2.3783,4.1626,13.48,1.227,Frozen complete pipeline on held-out evaluation sequence

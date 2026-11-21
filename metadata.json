@@ -1,0 +1,32 @@
+{
+  "track": "Track 3: Path Finder",
+  "competition": "XR Hackathon 2026",
+  "submission_date": "2026-11-21",
+  "degradation_simulator": "degrade_imu_default.py (official competition simulator)",
+  "system": {
+    "os": "win32",
+    "python_version": "3.13.5",
+    "num_cpu_threads_enforced": 1,
+    "target_runtime_ms_per_s": 20.0,
+    "target_heap_mb": 8.0
+  },
+  "performance_summary": {
+    "validation_ate_rmse_m": 5.0660,
+    "held_out_ate_rmse_m": 5.0729,
+    "held_out_normal_rmse_m": 4.0906,
+    "held_out_blind_tail_rmse_m": 8.3248,
+    "held_out_gap_rmse_m": 2.3783,
+    "measured_ms_per_imu_second": 2.37,
+    "measured_peak_heap_mb": 1.226,
+    "speed_gate_passed": true,
+    "memory_gate_passed": true
+  },
+  "io_contract": {
+    "cli": "python main.py <input.csv> <estimated_trajectory.txt>",
+    "input_format": "degrade_imu_default column order (timestamp, accel xyz, gyro xyz) with auto-detection for EuRoC",
+    "output_format": "TUM (timestamp tx ty tz qx qy qz qw)",
+    "quaternion_convention": "Hamilton scalar-last [qx, qy, qz, qw], world frame",
+    "zero_dt_policy": "Zero time step: maintain previous pose, preserve exact input cardinality",
+    "blind_tail_policy": "Extrapolate terminal velocity & angular rate with aerodynamic drag decay"
+  }
+}

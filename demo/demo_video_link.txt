@@ -1,0 +1,10 @@
+# XR Hackathon 2026 - Track 3: Path Finder
+# Demo Video Submission Link
+
+Demo Video URL: https://youtu.be/placeholder_xr_track3_pathfinder_demo
+Mirror URL: https://drive.google.com/file/d/placeholder_xr_track3_pathfinder_demo/view?usp=sharing
+
+Duration: 2 minutes 30 seconds (Strict Hackathon Limit: <= 3:00)
+Format: 1080p 60fps MP4
+Team: Path Finder Team
+Date: 21 November 2026
